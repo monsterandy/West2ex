@@ -16,6 +16,7 @@
 		A17378861DF6F13000A9F386 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17378851DF6F13000A9F386 /* Node.swift */; };
 		A17378881DF6F13F00A9F386 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17378871DF6F13F00A9F386 /* Member.swift */; };
 		A173788A1DF6F22400A9F386 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17378891DF6F22400A9F386 /* AppDelegate.swift */; };
+		BE5D33AE1DF82E2700671210 /* V2Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D33AD1DF82E2700671210 /* V2Collection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A17378871DF6F13F00A9F386 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Member.swift; path = Model/Member.swift; sourceTree = "<group>"; };
 		A17378891DF6F22400A9F386 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0BAC0E16A64065B15B450F6 /* Pods-West2ex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-West2ex.release.xcconfig"; path = "Pods/Target Support Files/Pods-West2ex/Pods-West2ex.release.xcconfig"; sourceTree = "<group>"; };
+		BE5D33AD1DF82E2700671210 /* V2Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = V2Collection.swift; path = Model/V2Collection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +77,12 @@
 		A17378681DF6F02400A9F386 /* West2ex */ = {
 			isa = PBXGroup;
 			children = (
+				A173787B1DF6F03400A9F386 /* Model */,
+				A173787C1DF6F09C00A9F386 /* ModelManager */,
 				A17378801DF6F0C400A9F386 /* Members */,
 				A173787F1DF6F0BC00A9F386 /* Nodes */,
 				A173787E1DF6F0B400A9F386 /* Latest */,
 				A173787D1DF6F0A600A9F386 /* Hot */,
-				A173787C1DF6F09C00A9F386 /* ModelManager */,
-				A173787B1DF6F03400A9F386 /* Model */,
 				A17378891DF6F22400A9F386 /* AppDelegate.swift */,
 				A173786D1DF6F02400A9F386 /* Main.storyboard */,
 				A17378701DF6F02400A9F386 /* Assets.xcassets */,
@@ -96,6 +98,7 @@
 				A17378831DF6F11D00A9F386 /* Topic.swift */,
 				A17378851DF6F13000A9F386 /* Node.swift */,
 				A17378871DF6F13F00A9F386 /* Member.swift */,
+				BE5D33AD1DF82E2700671210 /* V2Collection.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				A17378881DF6F13F00A9F386 /* Member.swift in Sources */,
 				A17378861DF6F13000A9F386 /* Node.swift in Sources */,
 				A17378841DF6F11D00A9F386 /* Topic.swift in Sources */,
+				BE5D33AE1DF82E2700671210 /* V2Collection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
