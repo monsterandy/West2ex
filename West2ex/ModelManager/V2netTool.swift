@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 let v2netTool = V2netTool()
 
@@ -40,6 +41,50 @@ class V2netTool{
             //for debug
             print(v2collection.demoData?.username ?? "fail")
             
+        }
+    }
+    
+    //  get hot topic
+    func getHotTopic(success:@escaping () -> Void, failure:@escaping () -> Void) {
+        // the url
+        let url = "https://www.v2ex.com/api/topics/hot.json"
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        Alamofire.request(url, method: .get).responseJSON{ response in
+            //  get data
+            guard let data = response.result.value else{
+                //  network error
+                failure()
+                return
+            }
+            let json = JSON(data)
+//            print(json.count)
+            hotTopicData.removeAll()
+            hotTopicCount = json.count
+            for i in 0..<json.count {
+                hotTopicData.append(TopicModel(id: json[i]["id"].intValue, title: json[i]["title"].stringValue, url: json[i]["url"].stringValue, replies: json[i]["replies"].intValue, memberAvatarUrl: json[i]["member"]["avatar_large"].stringValue, memberUsername: json[i]["member"]["username"].stringValue, memberId: json[i]["member"]["id"].intValue, nodeName: json[i]["node"]["name"].stringValue, nodeTitle: json[i]["node"]["title"].stringValue, lastTouchUnixTime: json[i]["last_touched"].intValue))
+            }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            success()
+        }
+    }
+    
+    func getLatestTopic(success:@escaping () -> Void, failure:@escaping () -> Void) {
+        let url = "https://www.v2ex.com/api/topics/latest.json"
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        Alamofire.request(url, method: .get).responseJSON{ response in
+            guard let data = response.result.value else{
+                failure()
+                return
+            }
+            let json = JSON(data)
+            print(json.count)
+            latestTopicData.removeAll()
+            latestTopicCount = json.count
+            for i in 0..<json.count {
+                latestTopicData.append(TopicModel(id: json[i]["id"].intValue, title: json[i]["title"].stringValue, url: json[i]["url"].stringValue, replies: json[i]["replies"].intValue, memberAvatarUrl: json[i]["member"]["avatar_large"].stringValue, memberUsername: json[i]["member"]["username"].stringValue, memberId: json[i]["member"]["id"].intValue, nodeName: json[i]["node"]["name"].stringValue, nodeTitle: json[i]["node"]["title"].stringValue, lastTouchUnixTime: json[i]["last_modified"].intValue))
+            }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            success()
         }
     }
     

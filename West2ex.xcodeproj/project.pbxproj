@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05F09DA9AC03A8496CB9B6DE /* Pods_West2ex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3070DFAFC1AF3035D44BB780 /* Pods_West2ex.framework */; };
+		A10D91461E30EBBF0002FC93 /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D91451E30EBBF0002FC93 /* RefreshView.swift */; };
 		A173786F1DF6F02400A9F386 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A173786D1DF6F02400A9F386 /* Main.storyboard */; };
 		A17378711DF6F02400A9F386 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17378701DF6F02400A9F386 /* Assets.xcassets */; };
 		A17378741DF6F02400A9F386 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17378721DF6F02400A9F386 /* LaunchScreen.storyboard */; };
@@ -16,12 +17,16 @@
 		A17378861DF6F13000A9F386 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17378851DF6F13000A9F386 /* Node.swift */; };
 		A17378881DF6F13F00A9F386 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17378871DF6F13F00A9F386 /* Member.swift */; };
 		A173788A1DF6F22400A9F386 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17378891DF6F22400A9F386 /* AppDelegate.swift */; };
+		A184345A1E2E64FF00770829 /* HotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18434591E2E64FF00770829 /* HotTableViewController.swift */; };
+		A1BB2C361E473D7F00CEBF0B /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB2C351E473D7F00CEBF0B /* DateTransform.swift */; };
+		A1CF1C551E3397630056D8AF /* LatestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CF1C541E3397630056D8AF /* LatestTableViewController.swift */; };
 		BE5D33AE1DF82E2700671210 /* V2Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D33AD1DF82E2700671210 /* V2Collection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3070DFAFC1AF3035D44BB780 /* Pods_West2ex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_West2ex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A412F3AF4F3AA550246085 /* Pods-West2ex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-West2ex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-West2ex/Pods-West2ex.debug.xcconfig"; sourceTree = "<group>"; };
+		A10D91451E30EBBF0002FC93 /* RefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RefreshView.swift; path = Hot/RefreshView.swift; sourceTree = "<group>"; };
 		A17378661DF6F02400A9F386 /* West2ex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = West2ex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A173786E1DF6F02400A9F386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A17378701DF6F02400A9F386 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +37,9 @@
 		A17378851DF6F13000A9F386 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = Model/Node.swift; sourceTree = "<group>"; };
 		A17378871DF6F13F00A9F386 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Member.swift; path = Model/Member.swift; sourceTree = "<group>"; };
 		A17378891DF6F22400A9F386 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A18434591E2E64FF00770829 /* HotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HotTableViewController.swift; path = Hot/HotTableViewController.swift; sourceTree = "<group>"; };
+		A1BB2C351E473D7F00CEBF0B /* DateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateTransform.swift; path = ModelManager/DateTransform.swift; sourceTree = "<group>"; };
+		A1CF1C541E3397630056D8AF /* LatestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LatestTableViewController.swift; path = Latest/LatestTableViewController.swift; sourceTree = "<group>"; };
 		B0BAC0E16A64065B15B450F6 /* Pods-West2ex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-West2ex.release.xcconfig"; path = "Pods/Target Support Files/Pods-West2ex/Pods-West2ex.release.xcconfig"; sourceTree = "<group>"; };
 		BE5D33AD1DF82E2700671210 /* V2Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = V2Collection.swift; path = Model/V2Collection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +114,7 @@
 		A173787C1DF6F09C00A9F386 /* ModelManager */ = {
 			isa = PBXGroup;
 			children = (
+				A1BB2C351E473D7F00CEBF0B /* DateTransform.swift */,
 				A17378811DF6F0E600A9F386 /* V2netTool.swift */,
 			);
 			name = ModelManager;
@@ -114,6 +123,8 @@
 		A173787D1DF6F0A600A9F386 /* Hot */ = {
 			isa = PBXGroup;
 			children = (
+				A18434591E2E64FF00770829 /* HotTableViewController.swift */,
+				A10D91451E30EBBF0002FC93 /* RefreshView.swift */,
 			);
 			name = Hot;
 			sourceTree = "<group>";
@@ -121,6 +132,7 @@
 		A173787E1DF6F0B400A9F386 /* Latest */ = {
 			isa = PBXGroup;
 			children = (
+				A1CF1C541E3397630056D8AF /* LatestTableViewController.swift */,
 			);
 			name = Latest;
 			sourceTree = "<group>";
@@ -178,11 +190,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = West2;
 				TargetAttributes = {
 					A17378651DF6F02400A9F386 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = P32ZD8U76E;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -276,6 +289,10 @@
 				A17378881DF6F13F00A9F386 /* Member.swift in Sources */,
 				A17378861DF6F13000A9F386 /* Node.swift in Sources */,
 				A17378841DF6F11D00A9F386 /* Topic.swift in Sources */,
+				A184345A1E2E64FF00770829 /* HotTableViewController.swift in Sources */,
+				A1BB2C361E473D7F00CEBF0B /* DateTransform.swift in Sources */,
+				A10D91461E30EBBF0002FC93 /* RefreshView.swift in Sources */,
+				A1CF1C551E3397630056D8AF /* LatestTableViewController.swift in Sources */,
 				BE5D33AE1DF82E2700671210 /* V2Collection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -387,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -401,6 +418,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P32ZD8U76E;
 				INFOPLIST_FILE = West2ex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.West2.West2ex;
@@ -415,6 +434,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P32ZD8U76E;
 				INFOPLIST_FILE = West2ex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.West2.West2ex;
