@@ -18,6 +18,7 @@
 		A17378881DF6F13F00A9F386 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17378871DF6F13F00A9F386 /* Member.swift */; };
 		A173788A1DF6F22400A9F386 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17378891DF6F22400A9F386 /* AppDelegate.swift */; };
 		A184345A1E2E64FF00770829 /* HotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18434591E2E64FF00770829 /* HotTableViewController.swift */; };
+		A18CEB281E5349DC00BA887C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18CEB271E5349DC00BA887C /* TabBarViewController.swift */; };
 		A1BB2C361E473D7F00CEBF0B /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB2C351E473D7F00CEBF0B /* DateTransform.swift */; };
 		A1CF1C551E3397630056D8AF /* LatestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CF1C541E3397630056D8AF /* LatestTableViewController.swift */; };
 		BE5D33AE1DF82E2700671210 /* V2Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D33AD1DF82E2700671210 /* V2Collection.swift */; };
@@ -38,6 +39,7 @@
 		A17378871DF6F13F00A9F386 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Member.swift; path = Model/Member.swift; sourceTree = "<group>"; };
 		A17378891DF6F22400A9F386 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A18434591E2E64FF00770829 /* HotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HotTableViewController.swift; path = Hot/HotTableViewController.swift; sourceTree = "<group>"; };
+		A18CEB271E5349DC00BA887C /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Hot/TabBarViewController.swift; sourceTree = "<group>"; };
 		A1BB2C351E473D7F00CEBF0B /* DateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateTransform.swift; path = ModelManager/DateTransform.swift; sourceTree = "<group>"; };
 		A1CF1C541E3397630056D8AF /* LatestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LatestTableViewController.swift; path = Latest/LatestTableViewController.swift; sourceTree = "<group>"; };
 		B0BAC0E16A64065B15B450F6 /* Pods-West2ex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-West2ex.release.xcconfig"; path = "Pods/Target Support Files/Pods-West2ex/Pods-West2ex.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				A18434591E2E64FF00770829 /* HotTableViewController.swift */,
 				A10D91451E30EBBF0002FC93 /* RefreshView.swift */,
+				A18CEB271E5349DC00BA887C /* TabBarViewController.swift */,
 			);
 			name = Hot;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				A173788A1DF6F22400A9F386 /* AppDelegate.swift in Sources */,
 				A17378821DF6F0E600A9F386 /* V2netTool.swift in Sources */,
+				A18CEB281E5349DC00BA887C /* TabBarViewController.swift in Sources */,
 				A17378881DF6F13F00A9F386 /* Member.swift in Sources */,
 				A17378861DF6F13000A9F386 /* Node.swift in Sources */,
 				A17378841DF6F11D00A9F386 /* Topic.swift in Sources */,

@@ -117,18 +117,20 @@ class RefreshView: UIView, UIScrollViewDelegate {
             cloud2.layer.removeAllAnimations()
             cloud3.layer.removeAllAnimations()
             sun.layer.removeAllAnimations()
+            self.progress = 0.0
+            self.updateBackgroundColor()
         }
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if !isRefreshing && progress == 1 {
-            print(targetContentOffset.pointee.y)
-            print(scrollView.contentInset.top)
-            print(scrollView.contentOffset.y)
+//            print(targetContentOffset.pointee.y)
+//            print(scrollView.contentInset.top)
+//            print(scrollView.contentOffset.y)
             beginRefreshing()
-            print(targetContentOffset.pointee.y)
-            print(scrollView.contentInset.top)
-            print(scrollView.contentOffset.y)
+//            print(targetContentOffset.pointee.y)
+//            print(scrollView.contentInset.top)
+//            print(scrollView.contentOffset.y)
             targetContentOffset.pointee.y = -scrollView.contentInset.top
             delegate?.RefreshViewDidRefresh(refreshView: self)
         }
@@ -141,7 +143,7 @@ class RefreshView: UIView, UIScrollViewDelegate {
         }
     }
     func updateBackgroundColor() {
-        backgroundColor = UIColor(white: 0.7 * progress + 0.2, alpha: 1.0)
+        backgroundColor = UIColor(white: 0.7 * progress + 0.3, alpha: 1.0)
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if isRefreshing {
