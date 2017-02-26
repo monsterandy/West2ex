@@ -20,8 +20,8 @@ class LatestTableViewController: UITableViewController, RefreshViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let textAttr = [ NSForegroundColorAttributeName: UIColor.white ]
-        navigationController?.navigationBar.titleTextAttributes = textAttr
+//        let textAttr = [ NSForegroundColorAttributeName: UIColor.white ]
+//        navigationController?.navigationBar.titleTextAttributes = textAttr
         refreshView = RefreshView(frame: CGRect(x: 0, y: -kRefreshViewHeight, width: view.bounds.width, height: kRefreshViewHeight), scrollView: tableView)
         refreshView.delegate = self
         view.insertSubview(refreshView, at: 0)
