@@ -13,16 +13,23 @@ import SafariServices
 private let kRefreshViewHeight: CGFloat = 200
 
 
-class HotTableViewController: UITableViewController, RefreshViewDelegate {
+class HotTableViewController: UITableViewController, UITabBarDelegate, RefreshViewDelegate {
     private var refreshView: RefreshView!
     private var firstLoadingView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let textAttr = [ NSForegroundColorAttributeName: UIColor.white ]
-        navigationController?.navigationBar.titleTextAttributes = textAttr
+//        let textAttr = [ NSForegroundColorAttributeName: UIColor.black ]
+//        navigationController?.navigationBar.titleTextAttributes = textAttr
+//        self.navigationController?.navigationBar.subviews[0].removeFromSuperview()
+//        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        
+        
         refreshView = RefreshView(frame: CGRect(x: 0, y: -kRefreshViewHeight, width: view.bounds.width, height: kRefreshViewHeight), scrollView: tableView)
         refreshView.delegate = self
+        
         view.insertSubview(refreshView, at: 0)
         firstLoadingView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
         firstLoadingView.backgroundColor = UIColor.white
@@ -87,7 +94,7 @@ class HotTableViewController: UITableViewController, RefreshViewDelegate {
         memberAvatar.layer.masksToBounds = true
         memberAvatar.layer.cornerRadius = 3
         memberAvatar.layer.borderWidth = 1
-        memberAvatar.layer.borderColor = UIColor.gray.cgColor
+        memberAvatar.layer.borderColor = UIColor.lightGray.cgColor
         node.layer.masksToBounds = true
         node.layer.cornerRadius = 3
         
@@ -130,21 +137,8 @@ class HotTableViewController: UITableViewController, RefreshViewDelegate {
         let safariController = SFSafariViewController(url: url!, entersReaderIfAvailable: false)
         self.present(safariController, animated: true, completion: nil)
     }
+    
 
-
-//    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showTopicDetail" {
-//            let td = segue.destination as! TopicDetailViewController
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                td.detailUrl = hotTopicData[indexPath.row].url
-//            }
-//        }
-//        
-//    }
-    
-    
-    
     
     
     
