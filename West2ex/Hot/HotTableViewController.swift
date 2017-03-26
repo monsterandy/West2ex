@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SafariServices
+import SDWebImage
 
 private let kRefreshViewHeight: CGFloat = 200
 
@@ -19,13 +20,6 @@ class HotTableViewController: UITableViewController, UITabBarDelegate, RefreshVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        let textAttr = [ NSForegroundColorAttributeName: UIColor.black ]
-//        navigationController?.navigationBar.titleTextAttributes = textAttr
-//        self.navigationController?.navigationBar.subviews[0].removeFromSuperview()
-//        self.navigationController?.navigationBar.isTranslucent = true
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        
         
         refreshView = RefreshView(frame: CGRect(x: 0, y: -kRefreshViewHeight, width: view.bounds.width, height: kRefreshViewHeight), scrollView: tableView)
         refreshView.delegate = self
@@ -44,15 +38,9 @@ class HotTableViewController: UITableViewController, UITabBarDelegate, RefreshVi
         tableView.estimatedRowHeight = 150
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        
-        
-        
-        
+
     }
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//        self.tableView.reloadData()
-//    }
+
     //  检测下拉动作
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         //  将滚动通知传递给refreshView
@@ -100,13 +88,15 @@ class HotTableViewController: UITableViewController, UITabBarDelegate, RefreshVi
         
         let url = URL(string: "https:" + hot.memberAvatarUrl)
         //  异步刷新图片
-        DispatchQueue.global().async {
-            if let data = try? Data(contentsOf: url!) {
-                DispatchQueue.main.async {
-                    memberAvatar.image = UIImage(data: data)
-                }
-            }
-        }
+//        DispatchQueue.global().async {
+//            if let data = try? Data(contentsOf: url!) {
+//                DispatchQueue.main.async {
+//                    memberAvatar.image = UIImage(data: data)
+//                }
+//            }
+//        }
+        memberAvatar.sd_setImage(with: url)
+        
         node.adjustsFontSizeToFitWidth = true
         node.text = hot.nodeTitle
         

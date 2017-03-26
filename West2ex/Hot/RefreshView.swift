@@ -124,13 +124,13 @@ class RefreshView: UIView, UIScrollViewDelegate {
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if !isRefreshing && progress == 1 {
-//            print(targetContentOffset.pointee.y)
-//            print(scrollView.contentInset.top)
-//            print(scrollView.contentOffset.y)
+            print(targetContentOffset.pointee.y)
+            print(scrollView.contentInset.top)
+            print(scrollView.contentOffset.y)
             beginRefreshing()
-//            print(targetContentOffset.pointee.y)
-//            print(scrollView.contentInset.top)
-//            print(scrollView.contentOffset.y)
+            print(targetContentOffset.pointee.y)
+            print(scrollView.contentInset.top)
+            print(scrollView.contentOffset.y)
             targetContentOffset.pointee.y = -scrollView.contentInset.top
             delegate?.RefreshViewDidRefresh(refreshView: self)
         }

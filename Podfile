@@ -9,4 +9,5 @@ target 'West2ex' do
 
   pod 'Alamofire', '~> 4.1'
   pod 'SwiftyJSON'
+  pod 'SDWebImage'
 end

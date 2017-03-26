@@ -12,7 +12,7 @@ import SwiftyJSON
 
 let v2netTool = V2netTool()
 
-class V2netTool{
+class V2netTool {
     
     //example packed function
     func getData(username:String,password:String){
